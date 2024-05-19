@@ -1,0 +1,501 @@
+/* Custom font faces for the application */
+@font-face {
+  font-family: "Arimo";
+  src: url("fonts/Arimo-VariableFont_wght.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "nulshock";
+  src: url("fonts/nulshock bd.otf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Defines global color variables for consistent theming across the application */
+:root {
+  --color-ice-blue: #b4bec9;
+  --color-teal: #2e5c85;
+  --color-deep-blue: #002333;
+  --color-mid-blue: #05405b;
+  --color-mint: #deefe7;
+  --color-white: #ffffff;
+}
+
+
+/* Styling for heading 2 elements */
+h2 {
+  padding: 0px;
+  margin: 2px;
+  margin-bottom: 5px;
+  font-size: 17px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+  color: #cde1e4;
+}
+
+
+/* Styling for heading 1 elements */
+h1 {
+  padding: 10px;
+  margin: 10px;
+  font-family: "nulshock";
+  font-size: 30px;
+}
+
+
+/* Styling for heading 3 elements */
+h3 {
+  font-size: small;
+  font-family: "Gill Sans", sans-serif;
+  color: #cde1e4;
+}
+
+/* Header styles */
+#title {
+  background: linear-gradient(135deg,
+      var(--color-deep-blue),
+      var(--color-teal));
+  border-radius: 15px;
+  color: var(--color-white);
+  background-color: var(--color-deep-blue);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  height: 10vh;
+  width: 98%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  margin-left: 20px;
+}
+
+/* Main content styling */
+body {
+  font-family: "Gill Sans", sans-serif;
+  background: url("images/angelo-abear-knTKij60p3g-unsplash.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--color-white);
+  flex-direction: row;
+  padding-right: 10px;
+  display: flex;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 110%;
+  height: 100%;
+  background: linear-gradient(to bottom,
+      rgba(3, 56, 82, 0.5),
+      rgba(1, 18, 36, 0.9));
+  z-index: 0;
+}
+
+
+/* Sidebar styling */
+#sidebar {
+  width: 30vh;
+  margin: 0px;
+  background-color: var(--color-mid-blue);
+  color: var(--color-white);
+  padding: 20px;
+  height: 95vh;
+  box-shadow: 9px 0 6px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  z-index: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom,
+      var(--color-mid-blue),
+      var(--color-deep-blue));
+}
+
+/* Main content area styling */
+#main-content {
+  flex-grow: 1;
+  z-index: 2;
+}
+
+
+/* Row styling for layout organization */
+#row1,
+#row2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  z-index: 2;
+}
+
+#row1 {
+  padding-bottom: 0px;
+}
+
+#row2 {
+  padding-top: 0px;
+}
+
+/* Section styling */
+#bar-graph,
+#map-div,
+#charts,
+#graphs,
+#heatmap {
+  background-color: var(--color-deep-blue);
+  border: 2px solid var(--color-mid-blue);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 1em;
+  width: 100%;
+  height: 39.5vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+#charts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#map-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#timeline {
+  background-color: var(--color-deep-blue);
+  border: 2px solid var(--color-mid-blue);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 1em;
+  width: 100%;
+  height: 39.5vh;
+  justify-content: center;
+  text-align: center;
+  max-width: 100%;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+}
+
+#bubble-chart,
+#charts {
+  padding-bottom: 1px;
+}
+
+.svg-content-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#map {
+  height: auto;
+  flex: 1;
+  width: 95%;
+  height: 80%;
+  border-radius: 15px;
+  display: flex;
+  z-index: 4;
+}
+
+#timeline-div {
+  height: auto;
+  width: 95%;
+  height: 80%;
+  border-radius: 15px;
+  display: flex;
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+}
+
+#bar-graph-div {
+  height: auto;
+  width: 95%;
+  height: 70%;
+  border-radius: 15px;
+  display: flex;
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+}
+
+#bubble-div {
+  height: auto;
+  width: 95%;
+  height: 75%;
+  border-radius: 15px;
+  display: flex;
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+}
+
+#heatmap-div {
+  height: auto;
+  width: 95%;
+  height: 60%;
+  border-radius: 15px;
+  display: flex;
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tooltip styling */
+#tooltip {
+  position: absolute;
+  min-width: auto;
+  min-height: auto;
+  background: lightsteelblue;
+  border-radius: 8px;
+  padding: 10px;
+  pointer-events: none;
+  opacity: 0;
+  left: 50px;
+  top: 50px;
+  z-index: 10000;
+  font-size: 13px;
+}
+
+/* Tooltip styling */
+#tooltip-bar {
+  position: absolute;
+  min-width: auto;
+  min-height: auto;
+  background: lightsteelblue;
+  border-radius: 8px;
+  padding: 10px;
+  pointer-events: none;
+  opacity: 0;
+  left: 50px;
+  top: 50px;
+  font-size: 13px;
+  z-index: 10000;
+}
+
+#tooltip-timeline {
+  position: absolute;
+  min-width: auto;
+  min-height: auto;
+  background: lightsteelblue;
+  border-radius: 8px;
+  padding: 10px;
+  pointer-events: none;
+  opacity: 0;
+  left: 50px;
+  top: 50px;
+  z-index: 10000;
+  font-size: 13px;
+}
+
+/* Hover effect transitions */
+a:hover,
+button:hover {
+  transition: background-color 0.3s ease;
+}
+
+
+#filters {
+  padding-bottom: 20px;
+}
+
+
+#question-1-text,
+#question-2-text,
+#question-3-text,
+#question-4-text {
+  position: relative;
+  font-size: 12px;
+  color: #cecece;
+  text-align: left;
+  margin: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#Questions {
+  padding-top: 40px;
+  padding: 10px;
+}
+
+#year-select,
+#month-select {
+  align-items: center;
+  background-color: #cccccc;
+  color: #272727;
+  flex-direction: row;
+  border-radius: 5px;
+}
+
+.header-area {
+  width: 100%;
+  text-align: center;
+}
+
+#filters-map,
+#title-map {
+  margin-bottom: 10px;
+}
+
+.lengendEntry {
+  z-index: 11;
+}
+
+/* Icons and text alignment */
+#cal-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0px;
+  color: #cccccc;
+  font-family: "Gill Sans", sans-serif;
+}
+
+#schooltype-div,
+#comp-div,
+#district-div,
+#enrollment-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  color: #cccccc;
+  font-family: "Gill Sans", sans-serif;
+}
+
+/* Icons */
+#cal-icon,
+#comp-icon,
+#grad-icon,
+#map-icon,
+#enroll-icon {
+  height: 15%;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 20px;
+  padding-bottom: 30px;
+  opacity: 0.5;
+}
+
+#grad-icon {
+  padding-right: 25px;
+}
+
+#legend-map {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  font-size: 10px;
+  background: rgb(43, 43, 43, 0);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 10;
+  color: #cccccc;
+  height: auto;
+  width: auto;
+}
+
+.legendEntry {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.legendColor {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 1px solid #b8b8b8;
+}
+
+
+/* Selector styling for various dropdowns in the application */
+#slider-date-label {
+  font-size: 15px;
+}
+
+#school-type-selector {
+  border-radius: 7px;
+  color: #272727;
+  background-color: #b8b8b8;
+  text-align: center;
+  font-size: 15px;
+  min-width: 160px;
+  height: auto;
+  max-width: 160px;
+  font-family: "Gill Sans", sans-serif;
+}
+
+#learning-model-selector {
+  border-radius: 7px;
+  color: #272727;
+  background-color: #b8b8b8;
+  text-align: center;
+  font-size: 15px;
+  min-width: 160px;
+  height: auto;
+  font-family: "Gill Sans", sans-serif;
+}
+
+#enrollment-range-selector {
+  border-radius: 7px;
+  color: #272727;
+  background-color: #b8b8b8;
+  text-align: center;
+  font-size: 15px;
+  min-width: 160px;
+  height: auto;
+  max-width: 160px;
+  font-family: "Gill Sans", sans-serif;
+}
+
+#district-selector {
+  border-radius: 7px;
+  color: #272727;
+  background-color: #b8b8b8;
+  text-align: center;
+  font-size: 15px;
+  min-width: 160px;
+  max-width: 160px;
+  height: auto;
+  max-width: 160px;
+  font-family: "Gill Sans", sans-serif;
+}

@@ -1,0 +1,7 @@
+geo json = https://data-cdegis.opendata.arcgis.com/datasets/6c2f651c068849da97fbc53954607af4_0/explore?location=37.502085%2C-119.302419%2C5.72&showTable=true
+mapbox
+backgroumd image = https://unsplash.com/photos/blue-and-white-light-illustration-knTKij60p3g?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash
+question mark gif = <a href="https://www.flaticon.com/free-animated-icons/question" title="question animated icons">Question animated icons created by Freepik - Flaticon</a>
+clock icon = <a href="https://www.flaticon.com/free-icons/clock" title="clock icons">Clock icons created by Pixel perfect - Flaticon</a>
+grad hat icon = <a href="https://www.flaticon.com/free-icons/school" title="school icons">School icons created by Freepik - Flaticon</a>
+computer icon = <a href="https://www.flaticon.com/free-icons/computer" title="computer icons">Computer icons created by Freepik - Flaticon</a>

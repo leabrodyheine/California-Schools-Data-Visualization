@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- title of the webpage -->
+  <title>CS 5044 P2</title>
+
+  <!-- Mapbox GL CSS -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet" />
+
+  <!-- Mapbox GL JS -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+
+  <!-- plotly -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <!-- Link to StyleSheet.css -->
+  <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+</head>
+
+<body>
+  <div id="sidebar">
+    <h2>Features Used</h2>
+    <div id="filters">
+      <div id="cal-div">
+        <img src="images/calendar.png" id="cal-icon">
+        <span> <label for="time-slider">Date:</label>
+          <input type="range" id="time-slider" name="time-slider">
+          <span id="slider-date-label"></span></span>
+      </div>
+      <div id="schooltype-div">
+        <img src="images/graduation-hat.png" id="grad-icon">
+        <span><select id="school-type-selector">
+            <option value="All">All School Types</option>
+            <option value="Other/alternative school">Other/alternative school</option>
+            <option value="Regular school">Regular school</option>
+            <option value="Special education school">Special education school</option>
+          </select></span>
+      </div>
+      <div id="comp-div">
+        <img src="images/monitor.png" id="comp-icon">
+        <span><select id="learning-model-selector">
+            <option value="All">All Models</option>
+            <option value="Virtual">Virtual</option>
+            <option value="Hybrid">Hybrid</option>
+            <option value="In-person">In-person</option>
+            <option value="Closed">Closed</option>
+          </select></span>
+      </div>
+      <div id="enrollment-div">
+        <img src="images/education.png" id="enroll-icon">
+        <span><select id="enrollment-range-selector">
+            <option value="All">All Sizes</option>
+            <option value="0-199">0-199</option>
+            <option value="200-399">200-399</option>
+            <option value="400-599">400-599</option>
+            <option value="600-799">600-799</option>
+            <option value="800-20000">800+</option>
+          </select></span>
+      </div>
+      <div id="district-div">
+        <img src="images/maps-and-flags.png" id="map-icon">
+        <span>
+          <select id="district-selector">
+            <!-- populated dynamically -->
+          </select>
+        </span>
+      </div>
+    </div>
+    <div id="Questions">
+      <h2>Questions Our Visualizations Answer</h2>
+      <div id="question-1-text">
+        1. How do learning models vary across different types of schools in California?
+      </div>
+      <div id="question-2-text">
+        2. How does the adoption of different learning models change over time?
+      </div>
+      <div id="question-3-text">
+        3. How does district and geographic location effect the choice of learning model?
+      </div>
+      <div id="question-4-text">
+        4. How does the size of a school or the school type effect which learning model was chosen during the pandemic?
+      </div>
+    </div>
+    <!-- Add your filters and other info here -->
+  </div>
+
+  <div id="main-content">
+    <div id="title">
+      <h1>California Schools: A Closer Look at Learning Models</h1>
+    </div>
+    <div id="row1">
+      <div id="bar-graph">
+        <h2>Learning Models At Different School Sizes</h2>
+        <div id="bar-graph-div">
+          <div id="tooltip-bar"></div>
+          <!-- placeholder for bar graph -->
+        </div>
+      </div>
+      <div id="map-div">
+        <div class="header-area">
+          <h2 id="title-map">Percent of Total Students Per District in Virtual Learning Model</h2>
+        </div>
+        <div id="map">
+          <div id="legend-map">
+            <!-- legend here -->
+          </div>
+          <!-- Placeholder for map -->
+        </div>
+      </div>
+      <div id="charts">
+        <h2>Total Percents of Learning Models</h2>
+        <div id='bubble-chart'>
+          <!-- Placeholder for chart -->
+        </div>
+      </div>
+    </div>
+    <div id="row2">
+      <div id="timeline">
+        <h2>Learning Model Prevalence Through Time</h2>
+        <div id="timeline-div">
+          <!-- placeholder -->
+        </div>
+      </div>
+      <div id="heatmap">
+        <h2>Learning Models At Different School Types</h2>
+        <div id="tooltip"></div>
+        <div id="heatmap-div">
+          <!-- placeholder -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Link to your Main.js -->
+  <script src="Main.js"></script>
+  <script src="DataLoader.js"></script>
+  <script src="MapVisualization.js"></script>
+  <script src="BubbleChart.js"></script>
+  <script src="TimeLineChart.js"></script>
+  <script src="HeatMap.js"></script>
+  <script src="BarChart.js"></script>
+</body>
+
+</html>
