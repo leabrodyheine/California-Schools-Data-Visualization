@@ -30,6 +30,9 @@ To run this project locally, follow these steps:
   - **heatMap.js**: Generates the heatmap visualization.
   - **mapVisualization.js**: Generates the geographic map visualization.
   - **timeLineChart.js**: Generates the timeline chart visualization.
+    
+## Video Walkthrough
+A zip file (`CS5044_P2_Video.mov.zip`) is provided that contains a video walkthrough of the dashboard. Unzip this file and watch the video to understand how to navigate and interact with the visualizations.
 
 ## Data Source
 The data used in this project is stored in `California_Schools_LearningModelData_Final.csv`. It includes details on school types, enrollment numbers, and learning models adopted by schools across various districts in California.
