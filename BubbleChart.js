@@ -17,6 +17,8 @@ function renderBubbleChart(filteredData) {
         height = 360 - margin.top - margin.bottom;
 
     const svg = container.append("svg")
+        .attr("role", "img")
+        .attr("aria-labelledby", "bubble-chart-title")
         .attr("width", width)
         .attr("height", height);
 

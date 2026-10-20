@@ -86,6 +86,8 @@ function renderBarChart(originalData) {
         height = 360 - margin.top - margin.bottom;
 
     var svg = d3.select("#bar-graph-div").append("svg")
+        .attr("role", "img")
+        .attr("aria-labelledby", "bar-chart-title")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")

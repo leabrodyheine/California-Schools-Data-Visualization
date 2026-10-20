@@ -15,6 +15,8 @@ function renderHeatMap(data) {
 
   const svg = d3.select("#heatmap-div")
     .append("svg")
+    .attr("role", "img")
+    .attr("aria-labelledby", "heatmap-title")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")

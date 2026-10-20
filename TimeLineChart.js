@@ -70,6 +70,8 @@ async function renderTimeLine(data) {
 
   const svg = d3.select("#timeline-div")
     .append("svg")
+    .attr("role", "img")
+    .attr("aria-labelledby", "timeline-title")
     .attr("preserveAspectRatio", "xMinYMin meet")
     .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
     .classed("svg-content-responsive", true)
