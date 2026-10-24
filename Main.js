@@ -64,6 +64,7 @@ function updateSliderDateLabel(monthYear) {
   const date = new Date(year, month - 1);
   const formattedDate = date.toLocaleString('default', { month: 'long', year: 'numeric' });
   document.getElementById('slider-date-label').textContent = formattedDate;
+  document.getElementById('time-slider').setAttribute('aria-valuetext', formattedDate);
 }
 
 
